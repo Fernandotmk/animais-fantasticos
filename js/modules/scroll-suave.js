@@ -36,6 +36,7 @@ export default class ScrollSauave {
   init() {
     if (this.linksInternos.length) {
       this.addLinkEvent();
+      console.log('teste');
     }
     return this; // ideal retornar o this para poder utilizar outras funções do objeto
   }
