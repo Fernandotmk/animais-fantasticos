@@ -1,5 +1,5 @@
 import ScrollSauave from './modules/scroll-suave.js';
-import animaScrolling from './modules/animacao-scroll.js';
+
 import initAccordion from './modules/accordion.js';
 import initTabMenu from './modules/tab-menu.js';
 import initModal from './modules/modal.js';
@@ -9,10 +9,11 @@ import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import initFechAnimais from './modules/fetch-animais.js';
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
+import animaScrolling from './modules/animacao-scroll.js';
 
 const scrollSuave = new ScrollSauave('[data-menu="menu"] a[href^="#"]');
 scrollSuave.init();
-animaScrolling();
+
 initAccordion();
 initTabMenu();
 initModal();
@@ -22,6 +23,7 @@ initMenuMobile();
 initFuncionamento();
 initFechAnimais();
 initFetchBitcoin();
+animaScrolling();
 
 /* //  <div data-cor="azul" data-width="500">Uma div</div> , está dentro do html
 const div = document.querySelector("div");
