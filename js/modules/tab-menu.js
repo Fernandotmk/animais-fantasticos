@@ -11,7 +11,7 @@ export default class TabNav {
     }); // loop forEach para começar removendo as classes ativo
     const dataAnime = this.tabContent[index].dataset.anime;
     this.tabContent[index].classList.add(this.activeClass, dataAnime);
-    console.log(this.tabContent[index]);
+    // console.log(this.tabContent[index]);
   }
 
   tabMenuEvent() {
