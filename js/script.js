@@ -3,11 +3,12 @@ import Accordion from './modules/accordion.js';
 import TabNav from './modules/tab-menu.js';
 import Modal from './modules/modal.js';
 import ToolTip from './modules/tooltip.js';
+import FechAnimais from './modules/fetch-animais.js';
 
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
-import initFechAnimais from './modules/fetch-animais.js';
+
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
 import animaScrolling from './modules/animacao-scroll.js';
 
@@ -36,9 +37,10 @@ toolTip.init();
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-initFechAnimais();
 initFetchBitcoin();
 animaScrolling();
+
+FechAnimais('./animaisapi.json', '.numeros-grid');
 
 /* //  <div data-cor="azul" data-width="500">Uma div</div> , está dentro do html
 const div = document.querySelector("div");
