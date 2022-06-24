@@ -4,13 +4,11 @@ import TabNav from './modules/tab-menu.js';
 import Modal from './modules/modal.js';
 import ToolTip from './modules/tooltip.js';
 import FechAnimais from './modules/fetch-animais.js';
-
+import FetchBitcoin from './modules/fetch-bitcoin.js';
+import ScrollAnima from './modules/scroll-anima.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
-
-import FetchBitcoin from './modules/fetch-bitcoin.js';
-import animaScrolling from './modules/animacao-scroll.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="menu"] a[href^="#"]');
 scrollSuave.init();
@@ -37,10 +35,12 @@ toolTip.init();
 FechAnimais('./animaisapi.json', '.numeros-grid');
 FetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
+const scrollAnima = new ScrollAnima("[data-js='scroll']");
+scrollAnima.init();
+
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-animaScrolling();
 
 /* //  <div data-cor="azul" data-width="500">Uma div</div> , está dentro do html
 const div = document.querySelector("div");
