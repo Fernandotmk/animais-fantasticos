@@ -1,4 +1,5 @@
-import initAnimaNumeros from './anima-numeros.js'; // importando aqui o initAnimaNumeros para que ele nao execute primeiro que o fetch
+import AnimaNumeros from './anima-numeros.js';
+// importando aqui o initAnimaNumeros para que ele nao execute primeiro que o fetch
 
 export default function initFechAnimais() {
   function createAnimal(animal) {
@@ -20,7 +21,12 @@ export default function initFechAnimais() {
         numerosGrid.appendChild(divAnimal); // colocando dentro de numerosgrid a nova div criada
       });
       // executando aqui o initAnimaNumeros para que ele nao execute primeiro que o fetch
-      initAnimaNumeros();
+      const animaNumeros = new AnimaNumeros(
+        '[data-numero]',
+        '.numeros',
+        'ativo',
+      );
+      animaNumeros.init();
     } catch (erro) {
       console.log(Error(erro));
     }
